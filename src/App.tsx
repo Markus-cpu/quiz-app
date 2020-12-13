@@ -5,8 +5,10 @@ import { fetchQuizQuestions } from './API'
 import QuestionCard from './components/QuestionCard'
 // Types
 import { QuestionState, Difficulty } from './API'
+// Styles
+import { GlobalStyle, Wrapper } from './App.styles'
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string
   answer: string
   correct: boolean
@@ -77,7 +79,9 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="app">
+    <>
+    <GlobalStyle />
+    <Wrapper>
 
       <h1>QUIZ APP</h1>
 
@@ -108,7 +112,8 @@ const App: React.FC = () => {
         </button>
       ) : null}
       
-    </div>
+    </Wrapper>
+    </>
   )
 }
 
